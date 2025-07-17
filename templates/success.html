@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>URL Shortener - Success</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 URL Shortener</h1>
+        <div class="success">
+            ✅ Success! Your shortened URL:<br>
+            <strong>http://localhost:5000/{{ code }}</strong>
+            <button class="btn copy-btn" onclick="copyToClipboard('http://localhost:5000/{{ code }}')">Copy</button>
+        </div>
+        <a href="/" class="btn">Shorten Another URL</a>
+        <a href="/debug" class="btn">View All URLs</a>
+    </div>
+    
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(function() {
+                alert('URL copied to clipboard!');
+            });
+        }
+    </script>
+</body>
+</html>
