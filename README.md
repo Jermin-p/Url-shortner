@@ -1,0 +1,1 @@
+URL Shortener is a web application that allows users to shorten long URLs and redirect to them using a short code. It's built using Python (Flask) and deployed securely on AWS inside a private subnet, with a public-facing Load Balancer for access.
